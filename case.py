@@ -17,7 +17,7 @@ def main():
     shark_time = 15
     turn_rnd_dis = 5
 
-    start_time = int(input(ru.START_TIME))
+    start_time = input(ru.START_TIME)
     hours, minutes = map(int, start_time.split(":"))
 
     total_time_min = 0
@@ -26,7 +26,5 @@ def main():
     total_time_min += shark_time
     total_time_min += turn_rnd_dis / (spd_bike / 60)
 
-
-
-
-
+if __name__ == '__main__':
+    main()
