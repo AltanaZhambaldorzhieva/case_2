@@ -4,6 +4,7 @@
 
 import ru_local as ru
 
+
 def main():
     '''
     Main function.
