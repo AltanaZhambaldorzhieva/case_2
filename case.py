@@ -29,7 +29,7 @@ def main():
     hours_time = total_time_min // 60
     minutes_time = total_time_min % 60
     finish_min = int((minutes + total_time_min) % 60)
-    finish_hrs = int((hours + ((minutes + total_time_min)//60))%24)
+    finish_hrs = int((hours + ((minutes + total_time_min)//60)) % 24)
 
     print(f'{ru.TOTAL_TIME} {int(hours_time)} {ru.HOUR}, {int(minutes_time)} {ru.MINUTES}')
     print(f'{ru.TIME_IN_MINUTES} {int(total_time_min)} {ru.MINUTES}')
