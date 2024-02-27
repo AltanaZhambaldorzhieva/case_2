@@ -15,27 +15,29 @@ def main():
     spd_bike = 60
     grandma_dis = 0.005
     dock_dis = 10
+    river_dis_1 = 10
     shark_time = 0.25
     turn_rnd_dis = 5
     spd_strm = 5
+    river_dis_2 = 10
 
     start_time = input(ru.START_TIME)
     hours, minutes = map(int, start_time.split(":"))
 
     total_time_hour = 0
-    total_time_hour += grandma_dis / (spd_perry / 60)
-    total_time_hour += dock_dis / (spd_perry / 60)
+    total_time_hour += grandma_dis / spd_perry
+    total_time_hour += dock_dis / spd_perry
+    total_time_hour += river_dis_1 / (spd_bike + spd_strm)
     total_time_hour += shark_time
-    total_time_hour += turn_rnd_dis / (spd_bike / 60)
-    total_time_hrs = total_time_min / 60
-    hours_time = total_time_min // 60
+    total_time_hour += turn_rnd_dis / (spd_bike - spd_strm)
+    total_time_hour += river_dis_2 / (spd_bike + spd_strm)
+    hours_time = total_time_hour // 60
     minutes_time = total_time_min % 60
     finish_min = int((minutes + total_time_min) % 60)
     finish_hrs = int((hours + ((minutes + total_time_min)//60)) % 24)
 
     print(f'{ru.TOTAL_TIME} {int(hours_time)} {ru.HOUR}, {int(minutes_time)} {ru.MINUTES}')
-    print(f'{ru.TIME_IN_MINUTES} {int(total_time_min)} {ru.MINUTES}')
-    print(f'{ru.TIME_IN_HOURS} {total_time_hrs} {ru.HOURS}')
+    print(f'{ru.TIME_IN_MINUTES} {int(total_time_hour)} {ru.MINUTES}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
 
 
