@@ -17,15 +17,16 @@ def main():
     dock_dis = 10
     shark_time = 0.25
     turn_rnd_dis = 5
+    spd_strm = 5
 
     start_time = input(ru.START_TIME)
     hours, minutes = map(int, start_time.split(":"))
 
-    total_time_min = 0
-    total_time_min += grandma_dis / (spd_perry / 60)
-    total_time_min += dock_dis / (spd_perry / 60)
-    total_time_min += shark_time
-    total_time_min += turn_rnd_dis / (spd_bike / 60)
+    total_time_hour = 0
+    total_time_hour += grandma_dis / (spd_perry / 60)
+    total_time_hour += dock_dis / (spd_perry / 60)
+    total_time_hour += shark_time
+    total_time_hour += turn_rnd_dis / (spd_bike / 60)
     total_time_hrs = total_time_min / 60
     hours_time = total_time_min // 60
     minutes_time = total_time_min % 60
@@ -36,7 +37,6 @@ def main():
     print(f'{ru.TIME_IN_MINUTES} {int(total_time_min)} {ru.MINUTES}')
     print(f'{ru.TIME_IN_HOURS} {total_time_hrs} {ru.HOURS}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
-    print(hours_time)
 
 
 if __name__ == '__main__':
