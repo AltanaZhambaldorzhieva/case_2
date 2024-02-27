@@ -22,9 +22,19 @@ def main():
 
     total_time_min = 0
     total_time_min += grandma_dis / (spd_perry / 60)
-    total_time_min += dock_dis / spd_perry * 60
+    total_time_min += dock_dis / (spd_perry / 60)
     total_time_min += shark_time
     total_time_min += turn_rnd_dis / (spd_bike / 60)
+    total_time_hrs = total_time_min / 60
+    hours_time = total_time_min // 60
+    minutes_time = total_time_min % 60
+    finish_min = int((minutes + total_time_min) % 60)
+    finish_hrs = int((hours + ((minutes + total_time_min)//60))%24)
+
+    print(f'{ru.TOTAL_TIME} {int(hours_time)} {ru.HOUR}, {int(minutes_time)} {ru.MINUTES}')
+    print(f'{ru.TIME_IN_MINUTES} {int(total_time_min)} {ru.MINUTES}')
+    print(f'{ru.TIME_IN_HOURS} {total_time_hrs} {ru.HOURS}')
+    print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
 
 if __name__ == '__main__':
     main()
