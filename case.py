@@ -15,7 +15,7 @@ def main():
     spd_bike = 60
     grandma_dis = 0.005
     dock_dis = 10
-    shark_time = 15
+    shark_time = 0.25
     turn_rnd_dis = 5
 
     start_time = input(ru.START_TIME)
@@ -36,6 +36,7 @@ def main():
     print(f'{ru.TIME_IN_MINUTES} {int(total_time_min)} {ru.MINUTES}')
     print(f'{ru.TIME_IN_HOURS} {total_time_hrs} {ru.HOURS}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
+    print(hours_time)
 
 
 if __name__ == '__main__':
