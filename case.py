@@ -36,5 +36,6 @@ def main():
     print(f'{ru.TIME_IN_HOURS} {total_time_hrs} {ru.HOURS}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
 
+
 if __name__ == '__main__':
     main()
