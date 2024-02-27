@@ -40,7 +40,6 @@ def main():
     finish_hrs = int((hours + ((minutes + total_time_min)//60)) % 24)
 
     print(f'{ru.TOTAL_TIME} : {total_time_min} {ru.MINUTES}')
-    print(f'{ru.TIME_IN_MINUTES} {int(total_time_hour)} {ru.MINUTES}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
 
 
