@@ -13,7 +13,7 @@ def main():
 
     spd_perry = 10
     spd_bike = 60
-    grandma_dis = 0.5
+    grandma_dis = 0.005
     dock_dis = 10
     shark_time = 15
     turn_rnd_dis = 5
