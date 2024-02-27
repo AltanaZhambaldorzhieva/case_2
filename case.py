@@ -42,8 +42,8 @@ def main():
         finish_min -= 60
         finish_hrs += 1
 
-    print(f'{ru.TOTAL_TIME} : {total_time_min} {ru.MINUTES}')
-    print(f'{ru.FINISH_TIME} {finish_hrs}:{finish_min}')
+    print(f'{ru.TOTAL_TIME}: {total_time_min} {ru.MINUTES}')
+    print(f'{ru.FINISH_TIME} {finish_hrs}:{(str(finish_min).zfill(2))}')
 
 
 if __name__ == '__main__':
