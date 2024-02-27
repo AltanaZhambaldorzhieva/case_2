@@ -2,6 +2,7 @@
 # Developers: Zhambaldorzhieva A., Zaytseva D., Ryaguzova D., Makarenko K.
 #
 
+
 import ru_local as ru
 
 
