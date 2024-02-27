@@ -31,12 +31,15 @@ def main():
     total_time_hour += shark_time
     total_time_hour += turn_rnd_dis / (spd_bike - spd_strm)
     total_time_hour += river_dis_2 / (spd_bike + spd_strm)
-    hours_time = total_time_hour // 60
-    minutes_time = total_time_min % 60
+
+    total_time_min = int(total_time_hour * 60)
+    hours_time = int(total_time_hour)
+    minutes_time = (total_time_hour - hours_time) * 60
+
     finish_min = int((minutes + total_time_min) % 60)
     finish_hrs = int((hours + ((minutes + total_time_min)//60)) % 24)
 
-    print(f'{ru.TOTAL_TIME} {int(hours_time)} {ru.HOUR}, {int(minutes_time)} {ru.MINUTES}')
+    print(f'{ru.TOTAL_TIME} : {total_time_min} {ru.MINUTES}')
     print(f'{ru.TIME_IN_MINUTES} {int(total_time_hour)} {ru.MINUTES}')
     print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
 
