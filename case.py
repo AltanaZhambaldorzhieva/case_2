@@ -34,13 +34,16 @@ def main():
 
     total_time_min = int(total_time_hour * 60)
     hours_time = int(total_time_hour)
-    minutes_time = (total_time_hour - hours_time) * 60
+    minutes_time = int((total_time_hour - hours_time) * 60)
 
-    finish_min = int((minutes + total_time_min) % 60)
-    finish_hrs = int((hours + ((minutes + total_time_min)//60)) % 24)
+    finish_hrs = hours + hours_time
+    finish_min = minutes + minutes_time
+    if finish_min >= 60:
+        finish_min -= 60
+        finish_hrs += 1
 
     print(f'{ru.TOTAL_TIME} : {total_time_min} {ru.MINUTES}')
-    print(f'{ru.FINISH_TIME} {finish_hrs}{ru.SPLIT}{finish_min}')
+    print(f'{ru.FINISH_TIME} {finish_hrs}:{finish_min}')
 
 
 if __name__ == '__main__':
