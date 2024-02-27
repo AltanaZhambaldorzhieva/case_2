@@ -1,4 +1,4 @@
-# Case_2
+# Case_2_
 # Developers: Zhambaldorzhieva A., Zaytseva D., Ryaguzova D., Makarenko K.
 #
 
