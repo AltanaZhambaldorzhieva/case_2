@@ -6,10 +6,10 @@ import ru_local as ru
 
 
 def main():
-    '''
+    """
     Main function.
     :return: None
-    '''
+    """
 
     spd_perry = 10
     spd_bike = 60
